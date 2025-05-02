@@ -1,0 +1,180 @@
+/*
+* Puffanee Alert HTML-CSS
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --redalert-color: #f55353;
+  --greenalert-color: #47ce8a;
+  --bluealert-color: #29a0f0;
+  --orangealert-color: #eb8440;
+  --blackalert-color: #161616;
+}
+
+.Pf__Alerts {
+  display: flex;
+  position: fixed;
+  z-index: 9999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Pf__Alerts.RightTop {
+  top: 10px;
+  right: 10px;
+  transform: translate(0, 0);
+}
+
+.Pf__Alerts.RightBottom {
+  bottom: 10px;
+  right: 10px;
+  transform: translate(0, 0);
+}
+
+.Pf__Alerts.LeftTop {
+  top: 10px;
+  left: 10px;
+  transform: translate(0, 0);
+}
+
+.Pf__Alerts.LeftBottom {
+  bottom: 10px;
+  left: 10px;
+  transform: translate(0, 0);
+}
+
+.Pf__Alerts.TopCenter {
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.Pf__Alerts.BottomCenter {
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.Pf__Alerts .Alert__List {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Pf__Alerts .Alert {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--blackalert-color);
+  padding: 17px 20px;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  align-items: center;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+}
+
+.Pf__Alerts .Alert .Alert__Text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.Pf__Alerts .Alert .Alert__Icon {
+  width: 23px;
+  height: 23px;
+  margin-right: 10px;
+}
+
+.Pf__Alerts .Alert .Alert__Icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.Pf__Alerts.TopCenter .Alert,
+.Pf__Alerts.LeftTop .Alert,
+.Pf__Alerts.RightTop .Alert {
+  animation-name: slide-in-top, slide-out-top;
+  animation-delay: 0s, 8s;
+}
+
+.Pf__Alerts.BottomCenter .Alert,
+.Pf__Alerts.LeftBottom .Alert,
+.Pf__Alerts.RightBottom .Alert {
+  animation-name: slide-in-bottom, slide-out-bottom;
+  animation-delay: 0s, 8s;
+}
+
+.Pf__Alerts .Alert.Danger {
+  background-color: var(--redalert-color);
+  color: #ffffff;
+}
+
+.Pf__Alerts .Alert.Success {
+  background-color: var(--greenalert-color);
+  color: #ffffff;
+}
+
+.Pf__Alerts .Alert.Information {
+  background-color: var(--bluealert-color);
+  color: #ffffff;
+}
+
+.Pf__Alerts .Alert.Warning {
+  background-color: var(--orangealert-color);
+  color: #ffffff;
+}
+
+.Pf__Alerts .Alert.Default {
+  background-color: var(--blackalert-color);
+  color: #ffffff;
+}
+
+@keyframes slide-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out-top {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes slide-out-bottom {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
