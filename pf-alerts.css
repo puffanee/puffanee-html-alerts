@@ -1,15 +1,15 @@
 /*
-* Puffanee Alert HTML-CSS
+* Puffanee Alert
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --redalert-color: #f55353;
-  --greenalert-color: #47ce8a;
-  --bluealert-color: #29a0f0;
-  --orangealert-color: #eb8440;
-  --blackalert-color: #161616;
+  --pfalert-redalert-color: #f55353;
+  --pfalert-greenalert-color: #47ce8a;
+  --pfalert-bluealert-color: #29a0f0;
+  --pfalert-orangealert-color: #eb8440;
+  --pfalert-blackalert-color: #161616;
 }
 
 .Pf__Alerts {
@@ -63,10 +63,10 @@
   gap: 10px;
 }
 
-.Pf__Alerts .Alert {
+.Pf__Alerts .Pf__Alert {
   display: flex;
   flex-direction: row;
-  background-color: var(--blackalert-color);
+  background-color: var(--pfalert-blackalert-color);
   padding: 17px 20px;
   border-radius: 0.5rem;
   color: #ffffff;
@@ -79,59 +79,59 @@
   width: 100%;
 }
 
-.Pf__Alerts .Alert .Alert__Text {
+.Pf__Alerts .Pf__Alert .Alert__Text {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1rem;
 }
 
-.Pf__Alerts .Alert .Alert__Icon {
+.Pf__Alerts .Pf__Alert .Alert__Icon {
   width: 23px;
   height: 23px;
   margin-right: 10px;
 }
 
-.Pf__Alerts .Alert .Alert__Icon svg {
+.Pf__Alerts .Pf__Alert .Alert__Icon svg {
   width: 100%;
   height: 100%;
 }
 
-.Pf__Alerts.TopCenter .Alert,
-.Pf__Alerts.LeftTop .Alert,
-.Pf__Alerts.RightTop .Alert {
+.Pf__Alerts.TopCenter .Pf__Alert,
+.Pf__Alerts.LeftTop .Pf__Alert,
+.Pf__Alerts.RightTop .Pf__Alert {
   animation-name: slide-in-top, slide-out-top;
   animation-delay: 0s, 8s;
 }
 
-.Pf__Alerts.BottomCenter .Alert,
-.Pf__Alerts.LeftBottom .Alert,
-.Pf__Alerts.RightBottom .Alert {
+.Pf__Alerts.BottomCenter .Pf__Alert,
+.Pf__Alerts.LeftBottom .Pf__Alert,
+.Pf__Alerts.RightBottom .Pf__Alert {
   animation-name: slide-in-bottom, slide-out-bottom;
   animation-delay: 0s, 8s;
 }
 
-.Pf__Alerts .Alert.Danger {
-  background-color: var(--redalert-color);
+.Pf__Alerts .Pf__Alert.Danger {
+  background-color: var(--pfalert-redalert-color);
   color: #ffffff;
 }
 
-.Pf__Alerts .Alert.Success {
-  background-color: var(--greenalert-color);
+.Pf__Alerts .Pf__Alert.Success {
+  background-color: var(--pfalert-greenalert-color);
   color: #ffffff;
 }
 
-.Pf__Alerts .Alert.Information {
-  background-color: var(--bluealert-color);
+.Pf__Alerts .Pf__Alert.Information {
+  background-color: var(--pfalert-bluealert-color);
   color: #ffffff;
 }
 
-.Pf__Alerts .Alert.Warning {
-  background-color: var(--orangealert-color);
+.Pf__Alerts .Pf__Alert.Warning {
+  background-color: var(--pfalert-orangealert-color);
   color: #ffffff;
 }
 
-.Pf__Alerts .Alert.Default {
-  background-color: var(--blackalert-color);
+.Pf__Alerts .Pf__Alert.Default {
+  background-color: var(--pfalert-blackalert-color);
   color: #ffffff;
 }
 
